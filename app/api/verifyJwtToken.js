@@ -30,7 +30,7 @@ module.exports = {
 				return res.status(500).send({
 					auth: false,
 					message: "Error",
-					errors: err
+					errors: err.message
 				});
 			}
 			req.userId = decoded.id;

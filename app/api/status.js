@@ -24,7 +24,7 @@ module.exports = {
       .catch((error) => {
         res.status(400).send({
           status_response: 'Bad Request',
-          errors: error
+          errors: error.message
         });
       });
   },
@@ -52,7 +52,7 @@ module.exports = {
       .catch((error) => {
         res.status(400).send({
           status_response: 'Bad Request',
-          errors: error
+          errors: error.message
         });
       });
   },
@@ -83,7 +83,7 @@ module.exports = {
       .catch((error) => {
         res.status(400).send({
           status_response: 'Bad Request',
-          errors: error
+          errors: error.message
         });
       });
   },
@@ -106,7 +106,7 @@ module.exports = {
       .catch((error) => {
         res.status(400).send({
           status_response: 'Bad Request',
-          errors: error
+          errors: error.message
         });
       });
   },
@@ -145,14 +145,14 @@ module.exports = {
           .catch((error) => {
             res.status(400).send({
               status_response: 'Bad Request',
-              errors: error
+              errors: error.message
             });
           });
       })
       .catch((error) => {
         res.status(400).send({
           status_response: 'Bad Request',
-          errors: error
+          errors: error.message
         });
       });
   },
@@ -184,14 +184,14 @@ module.exports = {
           .catch((error) => {
             res.status(400).send({
               status_response: 'Bad Request',
-              errors: error
+              errors: error.message
             });
           });
       })
       .catch((error) => {
         res.status(400).send({
           status_response: 'Bad Request',
-          errors: error
+          errors: error.message
         });
       });
   },
