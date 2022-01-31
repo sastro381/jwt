@@ -17,7 +17,7 @@ app.use(express.static("app/public"));
 //Set app config
 const title = process.env.TITLE;
 const port = process.env.PORT;
-const baseUrl = process.env.URL + port;
+const baseUrl = process.env.URL +":"+ port;
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
