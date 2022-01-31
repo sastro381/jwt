@@ -34,7 +34,7 @@ module.exports = {
 					res.status(500).send({
 						auth: false,
 						message: "Error",
-						errors: err
+						errors: err.message
 					});
 				});
 			}).catch(err => {
@@ -42,7 +42,7 @@ module.exports = {
 					auth: false,
 					id: req.body.id,
 					message: "Error",
-					errors: err
+					errors: err.message
 				});
 			})
 	},
@@ -94,7 +94,7 @@ module.exports = {
 					id: req.body.id,
 					accessToken: null,
 					message: "Error",
-					errors: err
+					errors: err.message
 				});
 			});
 	}
