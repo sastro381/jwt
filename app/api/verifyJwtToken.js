@@ -5,7 +5,7 @@ const User = require('../models').User;
 
 module.exports = {
 	verifyToken(req, res, next) {
-		let tokenHeader = req.headers['x-access-token'];
+		let tokenHeader = req.headers['authorization'];
 
 		if (tokenHeader.split(' ')[0] !== 'Bearer') {
 			return res.status(500).send({

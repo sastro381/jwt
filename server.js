@@ -17,7 +17,7 @@ app.use(express.static("app/public"));
 //Set app config
 const title = process.env.TITLE;
 const port = process.env.PORT;
-const baseUrl = process.env.URL + port;
+const baseUrl = process.env.URL +":"+ port;
 
 app.use((req, res, next) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -41,17 +41,17 @@ db.sequelize.sync().then(() => {
 });
 
 function create_roles(){
-	db.role.create({
+	db.Role.create({
 		id: 1,
 		name: "USER"
 	});
 	
-	db.role.create({
+	db.Role.create({
 		id: 2,
 		name: "ADMIN"
 	});
 	
-	db.role.create({
+	db.Role.create({
 		id: 3,
 		name: "PM"
 	});
